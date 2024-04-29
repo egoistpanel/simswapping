@@ -1,203 +1,267 @@
 <!DOCTYPE html>
-<html
-  data-bs-theme="light"
-  lang="en"
-  style="background: var(--bs-emphasis-color)"
->
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
-    />
-    <title>FOOL HOA</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/css/styles.css" />
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>sql</title>
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/7.css">
     <style>
-      body > :not(#overlay) {
-        display: none;
-      }
-
-      #enterButton {
-        opacity: 1;
-        transition: opacity 0.5s;
-      }
-
-      #enterButton:hover {
-        opacity: 0.5;
-        cursor: pointer;
-      }
-
-      #enterButton:active {
-        opacity: 0;
-      }
+.row {
+    margin-top:5px;
+}
     </style>
-  </head>
+</head>
 
-  <body style="background: var(--bs-emphasis-color)">
-    <audio id="audio" loop>
-      <source src="https://files.offshore.cat/t2mbtrOy.mp3" type="audio/mpeg" />
-      Your browser does not support the audio element.
-    </audio>
-    <div id="overlay">
-      <button onclick="startSite()" style="transition: opacity 0.5s; opacity: 1;" id="enterButton">Enter</button>
+<body class="has-scrollbar">
+  <nav id="navbar">
+    <pre class="asciipre">
+
+      ░▒▓███████▓▒░░▒▓██████▓▒░░▒▓█▓▒░        
+      ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░        
+      ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░        
+       ░▒▓██████▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░        
+             ░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░        
+             ░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░        
+      ░▒▓███████▓▒░ ░▒▓██████▓▒░░▒▓████████▓▒░ 
+                      ░▒▓█▓▒░                  
+                       ░▒▓██▓▒░                
+      
+    </pre>
+    <ul>
+      <li class="nav-link"><a href="https://simswapping.lol/hoa.html">Hall Of Austim</a> | <a target="_blank" href="https://t.me/fedhate">Services</a></li>
+    </ul>
+</nav>
+
+<div id="overlays" onclick="playMedia()">
+  <div id="overlay-text">Click anywhere to enter...</div>
+</div>
+<video id="video-background" loop muted playsinline>
+  <source src="https://files.catbox.moe/cckbka.jpg" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+    <div class="container profcont">
+        <div class="row">
+            <div class="col-md-12">
+              <div class="window glass active audwin" style="max-width: 250px">
+                <div class="title-bar">
+                  <div class="title-bar-text">Music</div>
+                  <div class="title-bar-controls">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Maximize"></button>
+                    <button aria-label="Close"></button>
+                  </div>
+                </div>
+                <div class="window-body has-space" style="overflow: hidden;">
+              <div class="audio-controls">
+                <p style="font-size:13px;margin-bottom:5px;">Now Playing...</p>
+                  <div id="songInfo" class="text-center">
+                      <div id="artist">Artist</div>
+                      <div id="songTitle">Song</div>
+                  </div>
+                  <div class="controls" style="margin-top:10px;margin-bottom:7px;">
+                      <a onclick="previousAudio()" style="margin-right:10px;"><img src="assets/icn/back.png"></a>
+                      <a id="playPauseButton" onclick="togglePlayPause()" style="margin-right:10px;"><img src="assets/icn/pause.png"></a>
+                      <a onclick="nextAudio()"><img src="assets/icn/next.png"></a>
+                  </div>
+              </div>
+            </div>
+        </div>
+        <div class="row" style="margin-top:80px;">
+            <div class="col-md-3 text-center">
+                <div class="window glass active" style="max-width: 300px">
+                    <div class="title-bar">
+                      <div class="title-bar-text">Rifle.exe</div>
+                      <div class="title-bar-controls">
+                        <button aria-label="Minimize"></button>
+                        <button aria-label="Maximize"></button>
+                        <button aria-label="Close"></button>
+                      </div>
+                    </div>
+                    <div class="window-body has-space">
+                        <img src="/assets/img/rifle.png" style="height:120px;border-radius:5px;">
+                      <h5 style="margin-top:8px;"><strong>Rifle</strong></h5>
+                      <p style="margin-top:11px;">Web Dev</p>
+                      <p style="font-size:9px;margin-top:9px;">--socials--</p>
+                      <ul style="margin-top:6px;" class="list-inline fs-6 text-muted w-100 mb-0">
+                        <li class="list-inline-item text-center" style="margin-bottom:5px;">
+                            <a class="slink" href="https://doxbin.com/user/yahoo" target="_blank"><div class="d-flex flex-column align-items-center"></div>doxbin</a>
+                        </li>
+                        <li class="list-inline-item text-center" style="margin-right: 5px;">
+                            <a class="slink" href="https://t.me/peepeepoofart" target="_blank"><div class="d-flex flex-column align-items-center"></div>telegram</a>
+                        </li>
+                        <li class="list-inline-item text-center" style="margin-right: 5px;">
+                            <a class="slink" href="https://discord.com/users/1217451874848870472" target="_blank"><div class="d-flex flex-column align-items-center"></div>discord</a>
+                        </li><br />
+                        <li class="list-inline-item text-center" style="margin-right: 5px;padding-bottom:3px;">
+                            <a class="slink" href="x@harm.wtf" target="_blank"><div class="d-flex flex-column align-items-center"></div>email</a>
+                        </li>
+                    </ul>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-md-3 text-center">
+                <div class="window glass active" style="max-width: 300px">
+                    <div class="title-bar">
+                      <div class="title-bar-text">Silent.exe</div>
+                      <div class="title-bar-controls">
+                        <button aria-label="Minimize"></button>
+                        <button aria-label="Maximize"></button>
+                        <button aria-label="Close"></button>
+                      </div>
+                    </div>
+                    <div class="window-body has-space">
+                        <img src="/assets/img/silent.png" style="height:120px;border-radius:5px;">
+                      <h5 style="margin-top:8px;"><strong>Damaxia</strong></h5>
+                      <p style="margin-top:11px;">rifles kitten / cute egirl</p>
+                      <p style="font-size:9px;margin-top:9px;">--socials--</p>
+                      <ul style="margin-top:6px;" class="list-inline fs-6 text-muted w-100 mb-0">
+                        <li class="list-inline-item text-center" style="margin-bottom:5px;">
+                            <a class="slink" href="https://doxbin.com/user/aiosqlite" target="_blank"><div class="d-flex flex-column align-items-center"></div>doxbin</a>
+                        </li>
+                        <li class="list-inline-item text-center" style="margin-right: 5px;">
+                            <a class="slink" href="https://t.me/peepeepoofart" target="_blank"><div class="d-flex flex-column align-items-center"></div>telegram</a>
+                        </li>
+                        <li class="list-inline-item text-center" style="margin-right: 5px;">
+                            <a class="slink" href="https://discord.com/users/1198646698281545868" target="_blank"><div class="d-flex flex-column align-items-center"></div>discord</a>
+                        </li><br />
+                        <li class="list-inline-item text-center" style="margin-right: 5px;padding-bottom:3px;">
+                            <a class="slink" href="nigger@harm.wtf" target="_blank"><div class="d-flex flex-column align-items-center"></div>email</a>
+                        </li>
+                    </ul>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-md-3 text-center"><div class="window glass active" style="max-width: 300px">
+                <div class="title-bar">
+                  <div class="title-bar-text">Kiri.exe</div>
+                  <div class="title-bar-controls">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Maximize"></button>
+                    <button aria-label="Close"></button>
+                  </div>
+                </div>
+                <div class="window-body has-space">
+                    <img src="/assets/img/kiri.png" style="height:120px;border-radius:5px;">
+                  <h5 style="margin-top:8px;"><strong>Gore</strong></h5>
+                  <p style="margin-top:11px;">don’t break rules be the reason rules are created</p>
+                  <p style="font-size:9px;margin-top:9px;">--socials--</p>
+                  <ul style="margin-top:6px;" class="list-inline fs-6 text-muted w-100 mb-0">
+                    <li class="list-inline-item text-center" style="margin-bottom:5px;">
+                        <a class="slink" href="https://doxbin.com/user/aiosqlite" target="_blank"><div class="d-flex flex-column align-items-center"></div>doxbin</a>
+                    </li>
+                    <li class="list-inline-item text-center" style="margin-right: 5px;">
+                        <a class="slink" href="https://t.me/comgrls" target="_blank"><div class="d-flex flex-column align-items-center"></div>telegram</a>
+                    </li>
+                    <li class="list-inline-item text-center" style="margin-right: 5px;">
+                        <a class="slink" href="https://discord.com/users/1175870538439200769" target="_blank"><div class="d-flex flex-column align-items-center"></div>discord</a>
+                    </li><br />
+                    <li class="list-inline-item text-center" style="margin-right: 5px;padding-bottom:3px;">
+                        <a class="slink" href="kiri@harm.wtf" target="_blank"><div class="d-flex flex-column align-items-center"></div>email</a>
+                    </li>
+                </ul>
+                </div>
+              </div></div>
+            <div class="col-md-3 text-center"><div class="window glass active" style="max-width: 300px">
+                <div class="title-bar">
+                  <div class="title-bar-text">Trip.exe</div>
+                  <div class="title-bar-controls">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Maximize"></button>
+                    <button aria-label="Close"></button>
+                  </div>
+                </div>
+                <div class="window-body has-space" style="padding-bottom:11px;">
+                    <img src="/assets/img/trip.png" style="height:120px;border-radius:5px;">
+                  <h5 style="margin-top:8px;"><strong>Godhold</strong></h5>
+                  <p style="margin-top:11px;">malware devr</p>
+                  <p style="font-size:9px;margin-top:9px;">--socials--</p>
+                  <ul style="margin-top:6px;" class="list-inline fs-6 text-muted w-100 mb-0">
+                    <li class="list-inline-item text-center" style="margin-bottom:5px;">
+                        <a class="slink" href="https://doxbin.com/user/aiosqlite" target="_blank"><div class="d-flex flex-column align-items-center"></div>doxbin</a>
+                    </li>
+                    <li class="list-inline-item text-center" style="margin-bottom:5px;">
+                        <a class="slink" href="https://t.me/triptych0" target="_blank"><div class="d-flex flex-column align-items-center"></div>telegram</a>
+                    </li>
+                    <li class="list-inline-item text-center" style="margin-bottom:5px;">
+                        <a class="slink" href="https://discord.com/users/1175870538439200769" target="_blank"><div class="d-flex flex-column align-items-center"></div>discord</a>
+                    </li><br />
+                    <li class="list-inline-item text-center" style="margin-right: 5px;padding-bottom:3px;">
+                        <a class="slink" href="retard@harm.wtf" target="_blank"><div class="d-flex flex-column align-items-center"></div>email</a>
+                    </li>
+                </ul>
+                </div>
+              </div></div>
+              <div class="col-md-3 text-center"><div class="window active" style="max-width: 300px; visibility: hidden;">
+
+                <div class="window-body has-space" style="padding-bottom:11px; visibility: hidden;">
+
+                </div>
+              </div></div>
+              <div class="col-md-3 text-center"><div class="window glass active" style="max-width: 300px; margin-top:15px;">
+                <div class="title-bar">
+                  <div class="title-bar-text">Trap.exe</div>
+                  <div class="title-bar-controls">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Maximize"></button>
+                    <button aria-label="Close"></button>
+                  </div>
+                </div>
+                <div class="window-body has-space" style="padding-bottom:11px;">
+                    <img src="/assets/img/trap.png" style="height:120px;border-radius:5px;">
+                  <h5 style="margin-top:8px;"><strong>Fent</strong></h5>
+                  <p style="margin-top:11px;">best troll / ethical haka</p>
+                  <p style="font-size:9px;margin-top:9px;">--socials--</p>
+                  <ul style="margin-top:6px;" class="list-inline fs-6 text-muted w-100 mb-0">
+                    <li class="list-inline-item text-center" style="margin-bottom:5px;">
+                        <a class="slink" href="https://doxbin.com/user/aiosqlite" target="_blank"><div class="d-flex flex-column align-items-center"></div>doxbin</a>
+                    </li>
+                    <li class="list-inline-item text-center" style="margin-bottom:5px;">
+                        <a class="slink" href="https://t.me/peepeepoofart" target="_blank"><div class="d-flex flex-column align-items-center"></div>telegram</a>
+                    </li>
+                    <li class="list-inline-item text-center" style="margin-bottom:5px;">
+                        <a class="slink" href="https://discord.com/users/966406273274880021" target="_blank"><div class="d-flex flex-column align-items-center"></div>discord</a>
+                    </li><br />
+                    <li class="list-inline-item text-center" style="margin-right: 5px;padding-bottom:3px;">
+                        <a class="slink" href="nigga@harm.wtf" target="_blank"><div class="d-flex flex-column align-items-center"></div>email</a>
+                    </li>
+                </ul>
+                </div>
+              </div></div>
+              <div class="col-md-3 text-center"><div class="window glass active" style="max-width: 300px; margin-top:15px;">
+                <div class="title-bar">
+                  <div class="title-bar-text">Sqli.exe</div>
+                  <div class="title-bar-controls">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Maximize"></button>
+                    <button aria-label="Close"></button>
+                  </div>
+                </div>
+                <div class="window-body has-space" style="padding-bottom:11px;">
+                    <img src="/assets/img/zee.png" style="height:120px;border-radius:5px;">
+                  <h5 style="margin-top:8px;"><strong>Zee</strong></h5>
+                  <p style="margin-top:11px;">inactive donut</p>
+                  <p style="font-size:9px;margin-top:9px;">--socials--</p>
+                  <ul style="margin-top:6px;" class="list-inline fs-6 text-muted w-100 mb-0">
+                    <li class="list-inline-item text-center" style="margin-bottom:5px;">
+                        <a class="slink" href="https://simswapping.lol" target="_blank"><div class="d-flex flex-column align-items-center"></div>telegram</a>
+                    </li>
+                    <li class="list-inline-item text-center" style="margin-bottom:5px;">
+                        <a class="slink" href="https://discord.com/users/1234037134789312542" target="_blank"><div class="d-flex flex-column align-items-center"></div>discord</a>
+                    </li><br />
+                    <li class="list-inline-item text-center" style="margin-right: 5px;padding-bottom:3px;">
+                        <a class="slink" href="https://simswapping.lol" target="_blank"><div class="d-flex flex-column align-items-center"></div>email</a>
+                    </li>
+                </ul>
+                </div>
+              </div></div>
+        </div>
     </div>
-
-    <h1
-      class="text-center rainbow-text"
-      style="color: var(--bs-body-bg); text-shadow: 0px 0px 6px"
-    >
-      HALL OF AUTISM
-    </h1>
-    <div class="container">
-      <div class="row" style="height: auto">
-        <div class="col">
-          <div class="card" style="background: var(--bs-body-color)">
-            <div
-              class="d-xl-flex justify-content-xl-center align-items-xl-center"
-              style="margin-top: 0"
-            >
-              <img
-                class="d-xl-flex"
-                width="150"
-                height="150"
-                src="https://files.offshore.cat/puqgM1nl.png"
-                style="margin-top: 53px"
-                loading="auto"
-              />
-            </div>
-            <div
-              class="card-body"
-              style="height: 165.8px; color: var(--bs-body-bg)"
-            >
-              <h4
-                class="text-center card-title rainbow-text"
-                style="margin-top: 0"
-              >
-                Vsj4h
-              </h4>
-              <p
-                class="scrollable-box"
-                style="font-size: 13px; margin-bottom: 0px"
-              >
-                Retarded editor who has attempted to extort multiple minors
-                / other editors over egirls or beef.
-                Had Even Pressured a 13 Year Old Boy Into cutting his name into his forehead
-                
-              </p>
-              <a
-                class="d-xl-flex justify-content-xl-center"
-                href="https://files.offshore.cat/bRhNNPY8.txt"
-                >Dox</a
-              >
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card" style="background: var(--bs-body-color)">
-            <div
-              class="d-xl-flex justify-content-xl-center align-items-xl-center"
-              style="margin-top: 0"
-            >
-              <img
-                class="d-xl-flex"
-                width="150"
-                height="150"
-                src="https://files.offshore.cat/RTTazuSJ.png"
-                style="margin-top: 53px"
-                loading="auto"
-              />
-            </div>
-            <div
-              class="card-body"
-              style="height: 165.8px; color: var(--bs-body-bg)"
-            >
-              <h4
-                class="text-center card-title rainbow-text"
-                style="margin-top: 0"
-              >
-                Bape / Bapevfx
-              </h4>
-              <p
-                class="scrollable-box"
-                style="font-size: 13px; margin-bottom: 0px"
-              >
-                Bape the retarded white fat kid who larped being able to simswap
-                Drain Banks and scam , Claimed he dropped 530K in one hit
-                Larps frozen wallets / Screenshots that aren't his + 
-                flexes his dads gun
-              </p>
-              <a
-                class="d-xl-flex justify-content-xl-center"
-                href="https://files.offshore.cat/BO5mydPT.txt"
-                style="margin-bottom: 0px"
-                >Dox</a
-              >
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card" style="background: var(--bs-body-color)">
-            <div
-              class="d-xl-flex justify-content-xl-center align-items-xl-center"
-              style="margin-top: 0"
-            >
-              <img
-                class="d-xl-flex"
-                width="150"
-                height="150"
-                src="https://files.offshore.cat/B4S1YrJi.png"
-                style="margin-top: 53px"
-                loading="auto"
-              />
-            </div>
-            <div
-              class="card-body"
-              style="height: 165.8px; color: var(--bs-body-bg)"
-            >
-              <h4
-                class="text-center card-title rainbow-text"
-                style="margin-top: 0"
-              >
-                Vale
-              </h4>
-              <p
-                class="scrollable- doubt let"
-                style="font-size: 13px; margin-bottom: 0px"
-              >
-                Vale the larping extorter who faked being in 764.<br />Wasted
-                Her life smoking weed and whoring around and one day ran into a gc
-                with me and ended up getting her "Opsec" breached which led to her getting ran off the net
-              </p>
-              <a
-                class="d-xl-flex justify-content-xl-center"
-                href="https://files.offshore.cat/IVU6aKHq.txt"
-                >Dox</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row" style="height: auto; margin-top: 1em">
-        <div class="col">
-          <div class="card" style="background: var(--bs-body-color)">
-            <div
-              class="d-xl-flex justify-content-xl-center align-items-xl-center"
-              style="margin-top: 0"
-            >
-              <img
-                class="d-xl-flex"
-                width="150"
-                height="150"
-                src="https://files.offshore.cat/3XmQGAn5.png"
-                style="margin-top: 53px"
-                loading="auto"
-              />
-            </div>
-            <div
-              class="card-body"
-              style="height: 165.8px; color: var(--bs-body-bg)"
-            >
-              <h4
-                class="text-center card-title rainbow-text"
-                style="margin-top:
+    <audio id="audio"></audio>
+  
+    </script><script src="/assets/js/mzik.js"></script>
+    <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
