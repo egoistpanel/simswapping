@@ -1,263 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>sql</title>
-    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/assets/css/styles.css">
-    <link rel="stylesheet" href="https://unpkg.com/7.css">
-    <style>
-.row {
-    margin-top:5px;
-}
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL</title>
+    <meta content="****" property="og:title" />
+    <meta content="SQL" property="og:description" />
+    <meta content="https://simswapping.lol" property="og:url" />
+    <meta content="https://files.offshore.cat/5GYx5xH4.gif" property="og:image" />
+    <meta content="#FFFFFF" data-react-helmet="true" name="theme-color" />
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.cdnfonts.com/css/vcr-osd-mono" rel="stylesheet">
 </head>
+<body>
+    <div class="container wallpaper">
 
-<body class="has-scrollbar">
-  <nav id="navbar">
-    <pre class="asciipre">  
-      ___________|  |  
-     /  ___/ ____/  |  
-     \___ < <_|  |  |__
-    /____  >__   |____/
-         \/   |__|      
-
-    </pre>
-    <ul>
-      <li class="nav-link"><a href="https://simswapping.lol/hoa.html">Hall Of Austim</a> | <a target="_blank" href="https://t.me/peepeepoofart">Services</a></li>
-    </ul>
-</nav>
-
-<div id="overlays" onclick="playMedia()">
-  <div id="overlay-text">Click anywhere to enter...</div>
-</div>
-<video id="video-background" loop muted playsinline>
-  <source src="https://files.offshore.cat/5GYx5xH4.gif" type="image/gif">
-  Your browser does not support the video tag.
-</video>
-    <div class="container profcont">
-        <div class="row">
-            <div class="col-md-12">
-              <div class="window glass active audwin" style="max-width: 250px">
-                <div class="title-bar">
-                  <div class="title-bar-text">Music</div>
-                  <div class="title-bar-controls">
-                    <button aria-label="Minimize"></button>
-                    <button aria-label="Maximize"></button>
-                    <button aria-label="Close"></button>
-                  </div>
-                </div>
-                <div class="window-body has-space" style="overflow: hidden;">
-              <div class="audio-controls">
-                <p style="font-size:13px;margin-bottom:5px;">Now Playing...</p>
-                  <div id="songInfo" class="text-center">
-                      <div id="artist">Artist</div>
-                      <div id="songTitle">Song</div>
-                  </div>
-                  <div class="controls" style="margin-top:10px;margin-bottom:7px;">
-                      <a onclick="previousAudio()" style="margin-right:10px;"><img src="assets/icn/back.png"></a>
-                      <a id="playPauseButton" onclick="togglePlayPause()" style="margin-right:10px;"><img src="assets/icn/pause.png"></a>
-                      <a onclick="nextAudio()"><img src="assets/icn/next.png"></a>
-                  </div>
-              </div>
+        <div class="profile">
+            <div class="pfp">
+                <img src="https://files.offshore.cat/Oe3N311C.png" width="120px">
+            </div>
+            <h1>silent</h1>
+            <p>rifles kitten</p>
+            <p class="g">--socials--</p>
+            <div class="socials">
+                <a target="_blank" href="https://t.me/peepeepoofart"><img src="telegram.png" width="30px"></a>
+                <a target="_blank" href="https://discord.com/users/1198646698281545868"><img src="discord.png" width="30px"></a>
+                <a target="_blank" href="https://discord.gg/wdym"><img src="link.png" width="30px"></a>
             </div>
         </div>
-        <div class="row" style="margin-top:80px;">
-            <div class="col-md-3 text-center">
-                <div class="window glass active" style="max-width: 300px">
-                    <div class="title-bar">
-                      <div class="title-bar-text">Rifle.exe</div>
-                      <div class="title-bar-controls">
-                        <button aria-label="Minimize"></button>
-                        <button aria-label="Maximize"></button>
-                        <button aria-label="Close"></button>
-                      </div>
-                    </div>
-                    <div class="window-body has-space">
-                        <img src="/assets/img/rifle.png" style="height:120px;border-radius:5px;">
-                      <h5 style="margin-top:8px;"><strong>Rifle</strong></h5>
-                      <p style="margin-top:11px;">Web Dev</p>
-                      <p style="font-size:9px;margin-top:9px;">--socials--</p>
-                      <ul style="margin-top:6px;" class="list-inline fs-6 text-muted w-100 mb-0">
-                        <li class="list-inline-item text-center" style="margin-bottom:5px;">
-                            <a class="slink" href="https://doxbin.com/user/yahoo" target="_blank"><div class="d-flex flex-column align-items-center"></div>doxbin</a>
-                        </li>
-                        <li class="list-inline-item text-center" style="margin-right: 5px;">
-                            <a class="slink" href="https://t.me/peepeepoofart" target="_blank"><div class="d-flex flex-column align-items-center"></div>telegram</a>
-                        </li>
-                        <li class="list-inline-item text-center" style="margin-right: 5px;">
-                            <a class="slink" href="https://discord.com/users/1217451874848870472" target="_blank"><div class="d-flex flex-column align-items-center"></div>discord</a>
-                        </li><br />
-                        <li class="list-inline-item text-center" style="margin-right: 5px;padding-bottom:3px;">
-                            <a class="slink" href="x@harm.wtf" target="_blank"><div class="d-flex flex-column align-items-center"></div>email</a>
-                        </li>
-                    </ul>
-                    </div>
-                  </div>
-            </div>
-            <div class="col-md-3 text-center">
-                <div class="window glass active" style="max-width: 300px">
-                    <div class="title-bar">
-                      <div class="title-bar-text">Silent.exe</div>
-                      <div class="title-bar-controls">
-                        <button aria-label="Minimize"></button>
-                        <button aria-label="Maximize"></button>
-                        <button aria-label="Close"></button>
-                      </div>
-                    </div>
-                    <div class="window-body has-space">
-                        <img src="/assets/img/silent.png" style="height:120px;border-radius:5px;">
-                      <h5 style="margin-top:8px;"><strong>Silent</strong></h5>
-                      <p style="margin-top:11px;">rifles kitten / cute egirl</p>
-                      <p style="font-size:9px;margin-top:9px;">--socials--</p>
-                      <ul style="margin-top:6px;" class="list-inline fs-6 text-muted w-100 mb-0">
-                        <li class="list-inline-item text-center" style="margin-bottom:5px;">
-                            <a class="slink" href="https://doxbin.com/user/aiosqlite" target="_blank"><div class="d-flex flex-column align-items-center"></div>doxbin</a>
-                        </li>
-                        <li class="list-inline-item text-center" style="margin-right: 5px;">
-                            <a class="slink" href="https://t.me/peepeepoofart" target="_blank"><div class="d-flex flex-column align-items-center"></div>telegram</a>
-                        </li>
-                        <li class="list-inline-item text-center" style="margin-right: 5px;">
-                            <a class="slink" href="https://discord.com/users/1198646698281545868" target="_blank"><div class="d-flex flex-column align-items-center"></div>discord</a>
-                        </li><br />
-                        <li class="list-inline-item text-center" style="margin-right: 5px;padding-bottom:3px;">
-                            <a class="slink" href="nigger@harm.wtf" target="_blank"><div class="d-flex flex-column align-items-center"></div>email</a>
-                        </li>
-                    </ul>
-                    </div>
-                  </div>
-            </div>
-            <div class="col-md-3 text-center"><div class="window glass active" style="max-width: 300px">
-                <div class="title-bar">
-                  <div class="title-bar-text">Kiri.exe</div>
-                  <div class="title-bar-controls">
-                    <button aria-label="Minimize"></button>
-                    <button aria-label="Maximize"></button>
-                    <button aria-label="Close"></button>
-                  </div>
-                </div>
-                <div class="window-body has-space">
-                    <img src="/assets/img/kiri.png" style="height:120px;border-radius:5px;">
-                  <h5 style="margin-top:8px;"><strong>Gore</strong></h5>
-                  <p style="margin-top:11px;">don’t break rules be the reason rules are created</p>
-                  <p style="font-size:9px;margin-top:9px;">--socials--</p>
-                  <ul style="margin-top:6px;" class="list-inline fs-6 text-muted w-100 mb-0">
-                    <li class="list-inline-item text-center" style="margin-bottom:5px;">
-                        <a class="slink" href="https://doxbin.com/user/aiosqlite" target="_blank"><div class="d-flex flex-column align-items-center"></div>doxbin</a>
-                    </li>
-                    <li class="list-inline-item text-center" style="margin-right: 5px;">
-                        <a class="slink" href="https://t.me/comgrls" target="_blank"><div class="d-flex flex-column align-items-center"></div>telegram</a>
-                    </li>
-                    <li class="list-inline-item text-center" style="margin-right: 5px;">
-                        <a class="slink" href="https://discord.com/users/1175870538439200769" target="_blank"><div class="d-flex flex-column align-items-center"></div>discord</a>
-                    </li><br />
-                    <li class="list-inline-item text-center" style="margin-right: 5px;padding-bottom:3px;">
-                        <a class="slink" href="kiri@harm.wtf" target="_blank"><div class="d-flex flex-column align-items-center"></div>email</a>
-                    </li>
-                </ul>
-                </div>
-              </div></div>
-            <div class="col-md-3 text-center"><div class="window glass active" style="max-width: 300px">
-                <div class="title-bar">
-                  <div class="title-bar-text">Trip.exe</div>
-                  <div class="title-bar-controls">
-                    <button aria-label="Minimize"></button>
-                    <button aria-label="Maximize"></button>
-                    <button aria-label="Close"></button>
-                  </div>
-                </div>
-                <div class="window-body has-space" style="padding-bottom:11px;">
-                    <img src="/assets/img/trip.png" style="height:120px;border-radius:5px;">
-                  <h5 style="margin-top:8px;"><strong>Godhold</strong></h5>
-                  <p style="margin-top:11px;">malware devr</p>
-                  <p style="font-size:9px;margin-top:9px;">--socials--</p>
-                  <ul style="margin-top:6px;" class="list-inline fs-6 text-muted w-100 mb-0">
-                    <li class="list-inline-item text-center" style="margin-bottom:5px;">
-                        <a class="slink" href="https://doxbin.com/user/aiosqlite" target="_blank"><div class="d-flex flex-column align-items-center"></div>doxbin</a>
-                    </li>
-                    <li class="list-inline-item text-center" style="margin-bottom:5px;">
-                        <a class="slink" href="https://t.me/triptych0" target="_blank"><div class="d-flex flex-column align-items-center"></div>telegram</a>
-                    </li>
-                    <li class="list-inline-item text-center" style="margin-bottom:5px;">
-                        <a class="slink" href="https://discord.com/users/1175870538439200769" target="_blank"><div class="d-flex flex-column align-items-center"></div>discord</a>
-                    </li><br />
-                    <li class="list-inline-item text-center" style="margin-right: 5px;padding-bottom:3px;">
-                        <a class="slink" href="retard@harm.wtf" target="_blank"><div class="d-flex flex-column align-items-center"></div>email</a>
-                    </li>
-                </ul>
-                </div>
-              </div></div>
-              <div class="col-md-3 text-center"><div class="window active" style="max-width: 300px; visibility: hidden;">
 
-                <div class="window-body has-space" style="padding-bottom:11px; visibility: hidden;">
+        <div class="profile">
+            <div class="pfp">
+                <img src="https://files.offshore.cat/rv7i5IO2.png" width="120px">
+            </div>
+            <h1>Rifle</h1>
+            <p >Site Dev</p>
+            <p class="g">--socials--</p>
+            <div class="socials">
+                <a target="_blank" href="https://t.me/peepeepoofart"><img src="telegram.png" width="30px"></a>
+                <a target="_blank" href="https://discord.com/users/1217451874848870472"><img src="discord.png" width="30px"></a>
+                <a target="_blank" href="https://deathfor.us"><img src="link.png" width="30px"></a>
+            </div>
+        </div>
 
-                </div>
-              </div></div>
-              <div class="col-md-3 text-center"><div class="window glass active" style="max-width: 300px; margin-top:15px;">
-                <div class="title-bar">
-                  <div class="title-bar-text">Trap.exe</div>
-                  <div class="title-bar-controls">
-                    <button aria-label="Minimize"></button>
-                    <button aria-label="Maximize"></button>
-                    <button aria-label="Close"></button>
-                  </div>
-                </div>
-                <div class="window-body has-space" style="padding-bottom:11px;">
-                    <img src="/assets/img/trap.png" style="height:120px;border-radius:5px;">
-                  <h5 style="margin-top:8px;"><strong>Fent</strong></h5>
-                  <p style="margin-top:11px;">best troll / ethical haka</p>
-                  <p style="font-size:9px;margin-top:9px;">--socials--</p>
-                  <ul style="margin-top:6px;" class="list-inline fs-6 text-muted w-100 mb-0">
-                    <li class="list-inline-item text-center" style="margin-bottom:5px;">
-                        <a class="slink" href="https://doxbin.com/user/aiosqlite" target="_blank"><div class="d-flex flex-column align-items-center"></div>doxbin</a>
-                    </li>
-                    <li class="list-inline-item text-center" style="margin-bottom:5px;">
-                        <a class="slink" href="https://t.me/peepeepoofart" target="_blank"><div class="d-flex flex-column align-items-center"></div>telegram</a>
-                    </li>
-                    <li class="list-inline-item text-center" style="margin-bottom:5px;">
-                        <a class="slink" href="https://discord.com/users/966406273274880021" target="_blank"><div class="d-flex flex-column align-items-center"></div>discord</a>
-                    </li><br />
-                    <li class="list-inline-item text-center" style="margin-right: 5px;padding-bottom:3px;">
-                        <a class="slink" href="nigga@harm.wtf" target="_blank"><div class="d-flex flex-column align-items-center"></div>email</a>
-                    </li>
-                </ul>
-                </div>
-              </div></div>
-              <div class="col-md-3 text-center"><div class="window glass active" style="max-width: 300px; margin-top:15px;">
-                <div class="title-bar">
-                  <div class="title-bar-text">Sqli.exe</div>
-                  <div class="title-bar-controls">
-                    <button aria-label="Minimize"></button>
-                    <button aria-label="Maximize"></button>
-                    <button aria-label="Close"></button>
-                  </div>
-                </div>
-                <div class="window-body has-space" style="padding-bottom:11px;">
-                    <img src="/assets/img/sql.png" style="height:120px;border-radius:5px;">
-                  <h5 style="margin-top:8px;"><strong>sql</strong></h5>
-                  <p style="margin-top:11px;">inactive donut</p>
-                  <p style="font-size:9px;margin-top:9px;">--socials--</p>
-                  <ul style="margin-top:6px;" class="list-inline fs-6 text-muted w-100 mb-0">
-                    <li class="list-inline-item text-center" style="margin-bottom:5px;">
-                        <a class="slink" href="https://simswapping.lol" target="_blank"><div class="d-flex flex-column align-items-center"></div>telegram</a>
-                    </li>
-                    <li class="list-inline-item text-center" style="margin-bottom:5px;">
-                        <a class="slink" href="https://discord.com/users/1234037134789312542" target="_blank"><div class="d-flex flex-column align-items-center"></div>discord</a>
-                    </li><br />
-                    <li class="list-inline-item text-center" style="margin-right: 5px;padding-bottom:3px;">
-                        <a class="slink" href="https://simswapping.lol" target="_blank"><div class="d-flex flex-column align-items-center"></div>email</a>
-                    </li>
-                </ul>
-                </div>
-              </div></div>
+        <div class="profile">
+            <div class="pfp">
+                <img src="https://files.offshore.cat/InnZOslP.png" width="120px">
+            </div>
+            <h1>Trap</h1>
+            <p >Best troll / Ethical haka</p>
+            <p class="g">--socials--</p>
+            <div class="socials">
+                <a target="_blank" href="https://t.me/peepeepoofart"><img src="telegram.png" width="30px"></a>
+                <a target="_blank" href="https://discord.com/users/966406273274880021"><img src="discord.png" width="30px"></a>
+                <a target="_blank" href="https://discord.gg/wdym"><img src="link.png" width="30px"></a>
+            </div>
+        </div>
+
+        <div class="profile">
+            <div class="pfp">
+                <img src="https://files.offshore.cat/aqXhv6rP.png" width="120px">
+            </div>
+            <h1>Trip</h1>
+            <p >Malware Dev</p>
+            <p class="g">--socials--</p>
+            <div class="socials">
+                <a target="_blank" href="https://t.me/triptych0"><img src="telegram.png" width="30px"></a>
+                <a target="_blank" href="https://discord.com/users/1175870538439200769"><img src="discord.png" width="30px"></a>
+                <a target="_blank" href="https://simswapping.lol"><img src="link.png" width="30px"></a>
+            </div>
         </div>
     </div>
-    <audio id="audio"></audio>
-  
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="/assets/js/mzik.js"></script>
-    <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
-</body>
+    <div class="text">
+        <p>Click one of the 2 options under here for more</p>
+        <p>Our current personal domains are:</p>
+        <a target="_blank" href="omh.html">Other Member hall</a>
+        <h3>CREATED WITH ♡ BY Rifle</h3>
+        <a href="hoa.html">Hall Of Aut*sm</a>
+    </div>
+    <audio autoplay src="lemonade.mp3"></audio>
+    <script>
+        const enter = document.getElementById("enter");
+        const main = document.getElementById("main");
+        const audio = document.querySelector("audio");
 
+        enter.addEventListener("click", function() {
+            enter.style.display = "none";
+            main.style.display = "flex";
+            setTimeout(() => main.style.animation = "none", 1000);
+            audio.play();
+            gtag('event', 'enter', { 'event_category': 'interaction' });
+        });
+    </script>
+    <script>
+        document.addEventListener('keydown', function(event) {
+          if (event.key === "F12") {
+            window.location.href = 'https://fbi.bet'; 
+          }
+        });
+        </script>
+        
+</body>
 </html>
